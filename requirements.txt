@@ -1,6 +1,6 @@
 matplotlib
 catboost
-imbalance-learn
+imbalanced-learn
 markdown-it-py==3.0.0
 mdurl==0.1.2
 pygments==2.19.1
