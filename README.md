@@ -1,5 +1,7 @@
-### Medical Documentation on Diabetes Dataset
-![project screenshot](Uploading Screenshot 2025-04-20 194036.png…]
+![Screenshot 2025-04-20 194036](https://github.com/user-attachments/assets/888324d1-9872-4856-8f24-f07d465b16b3)### Medical Documentation on Diabetes Dataset
+
+![project screenshot](assets/Uploading Screenshot 2025-04-20 194036.png]
+
 
 
 1) ## Dataset Overview:
