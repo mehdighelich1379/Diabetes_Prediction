@@ -7,3 +7,4 @@ catboost
 imbalanced-learn
 tensorflow
 pickle
+streamlit
