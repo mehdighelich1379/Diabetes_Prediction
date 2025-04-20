@@ -1,4 +1,6 @@
 ### Medical Documentation on Diabetes Dataset
+![project screenshot](Uploading Screenshot 2025-04-20 194036.png…]
+
 
 1) ## Dataset Overview:
 The diabetes.csv dataset is designed to predict whether an individual has diabetes or not based on various features related to their medical history, physical conditions, and other relevant factors. This dataset is often used in machine learning applications for classification tasks. The primary goal of this project is to predict the Outcome column (whether the individual is diabetic or not) based on the other features.
