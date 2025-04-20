@@ -1,3 +1,4 @@
+catboost
 pandas
 numpy
 matplotlib
@@ -7,4 +8,4 @@ imbalanced-learn
 tensorflow
 pickle
 streamlit
-catboost
+
