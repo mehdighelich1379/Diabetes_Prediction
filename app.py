@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
-
+import catboost
 
 with open('Final_Diabetes_catboost_model.txt' , 'rb') as file:
           model = pickle.load(file)
