@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 
-with open('models\Final_Diabetes_catboost_model.txt' , 'rb') as file:
+with open('Final_Diabetes_catboost_model.txt' , 'rb') as file:
           model = pickle.load(file)
 
 
