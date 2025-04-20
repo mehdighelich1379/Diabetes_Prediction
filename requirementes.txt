@@ -3,7 +3,6 @@ numpy
 matplotlib
 seaborn
 sklearn
-catboost
 imbalanced-learn
 tensorflow
 pickle
