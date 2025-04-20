@@ -1,9 +1,10 @@
 import streamlit as st
-import joblib
+import pickle
 import numpy as np
 
 
-model = joblib.load(r'C:\Users\T A T\project\Machin Learning\classification project\Diabetes\models\Final_Diabetes_catboost_model.txt')
+with open(r'C:\Users\T A T\project\Machin Learning\classification project\Diabetes\models\Final_Diabetes_catboost_model.txt' , 'rb) as file:
+          model = pickle.load(file)
 
 
 st.title('Diabetes Prediction')
