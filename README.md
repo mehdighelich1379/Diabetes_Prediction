@@ -1,7 +1,9 @@
 ![Screenshot 2025-04-20 194036](https://github.com/user-attachments/assets/888324d1-9872-4856-8f24-f07d465b16b3)### Medical Documentation on Diabetes Dataset
 
-![project screenshot](assets/Uploading Screenshot 2025-04-20 194036.png]
 
+# Heart Disease Prediction
+This is a machine learning model to predict heart disease based on patient data. You can interact with the app directly here:
+[Try the Live App]([https://your-app-name.streamlit.app](https://diabetesprediction-with-machin-learning-mehdighelich1.streamlit.app/))
 
 
 1) ## Dataset Overview:
