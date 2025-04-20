@@ -1,5 +1,6 @@
 pandas
 numpy
+joblib
 matplotlib
 seaborn
 sklearn
@@ -8,4 +9,4 @@ imbalanced-learn
 tensorflow
 pickle
 streamlit
-joblib
+
