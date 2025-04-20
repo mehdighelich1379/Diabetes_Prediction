@@ -3,7 +3,8 @@
 
 # Heart Disease Prediction
 This is a machine learning model to predict heart disease based on patient data. You can interact with the app directly here:
-[Try the Live App]([(https://diabetesprediction-with-machin-learning-mehdighelich1.streamlit.app])
+
+Try the Live App https://diabetesprediction-with-machin-learning-mehdighelich1.streamlit.app
 
 
 1) ## Dataset Overview:
