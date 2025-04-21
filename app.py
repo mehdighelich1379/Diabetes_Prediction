@@ -1,51 +1,33 @@
 import streamlit as st
 import pickle
-import pandas as pd
-
-import streamlit as st
-
-st.image('https://www.darmankade.com/blog/wp-content/uploads/2019/12/Is-Thyroid-Dangerous10.jpg', use_column_width=True)
+import numpy as np
+import catboost
 
 
-with open('catboost_model.txt', 'rb') as model_file:
-    model = pickle.load(model_file)
-st.sidebar.header("Enter the details for prediction:🔍")
-
-age = st.sidebar.number_input("inter your age", min_value=0, max_value=100, value=0)
-sex = st.sidebar.number_input("inter your sex", min_value=0, max_value=1, value=0)
-cp = st.sidebar.number_input("inter your cp", min_value=0, max_value=3, value=0)
-trestbps = st.sidebar.number_input("inter your trestbps", min_value=0, max_value=300, value=0)
-chol = st.sidebar.number_input("inter your chol", min_value=0, max_value=500, value=0)
-restecg = st.sidebar.number_input("inter your restecg", min_value=0, max_value=2, value=0)
-thalach = st.sidebar.number_input("inter your thalach", min_value=0, max_value=200, value=0)
-exang = st.sidebar.number_input("inter your exang", min_value=0, max_value=1, value=0)
-oldpeak = st.sidebar.number_input("inter your oldpeak", min_value=0, max_value=5, value=0)
-slope = st.sidebar.number_input("inter your slope", min_value=0, max_value=2, value=0)
-ca = st.sidebar.number_input("inter your ca", min_value=0, max_value=4, value=0)
-thal = st.sidebar.number_input("inter your thal", min_value=0, max_value=3, value=0)
+with open('Final_Diabetes_catboost_model.txt' , 'rb') as file:
+          model = pickle.load(file)
 
 
-user_input = pd.DataFrame({
-    'age': [age],
-    'sex': [sex],
-    'cp': [cp],
-    'trestbps': [trestbps],
-    'chol': [chol],
-    'restecg': [restecg],
-    'thalach': [thalach],
-    'exang': [exang],
-    'oldpeak': [oldpeak],
-    'slope': [slope],
-    'ca': [ca],
-    'thal': [thal]
-})
+st.sidebar.header("Diabetes Prediction")
 
-prob = model.predict_proba(user_input)[0][1]
 
-st.sidebar.write(f"Probability of Heart Disease: {prob:.2f}")
+pregnancies = st.sidebar.number_input('Enter the number of pregnancies', min_value=0)
+glucose = st.sidebar.number_input('Enter the glucose level', min_value=0)
+blood_pressure = st.sidebar.number_input('Enter the blood pressure', min_value=0)
+skin_thickness = st.sidebar.number_input('Enter the skin thickness', min_value=0)
+insulin = st.sidebar.number_input('Enter the insulin level', min_value=0)
+bmi = st.sidebar.number_input('Enter the BMI', min_value=0.0)
+pedigree = st.sidebar.number_input('Enter the diabetes pedigree function', min_value=0.0)
+age = st.sidebar.number_input('Enter the age', min_value=0)
 
-if st.button("Predict"):
-    if prob >= 0.6:
-        st.error("The patient has a high probability of having heart disease.")
+
+if st.button('Predict'):
+    features = np.array([[pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, pedigree, age]])
+    prediction = model.predict_proba(features)[0][1]
+
+    st.write(f'The predicted probability of diabetes is: **{prediction:.2f}**')
+
+    if prediction >= 0.6:
+        st.error('The person is likely to have diabetes.')
     else:
-        st.success("The patient has a low probability of having heart disease.")
+        st.success('The person is unlikely to have diabetes.')
